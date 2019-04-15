@@ -104,10 +104,10 @@
                 <!-- contact form -->
                 <div class="col-md-6">
                     <div class="contact-form">
-                        <form>
-                            <input class="input" type="text" name="name" placeholder="Login">
-                            <input class="input" type="email" name="email" placeholder="Password">
-                            <button class="main-button icon-button pull-right">Log In</button>
+                        <form action="/LoginServlet" method="post">
+                            <input class="input" type="text" name="login" placeholder="Login">
+                            <input class="input" type="password" name="pwd" placeholder="Password">
+                            <button class="main-button icon-button pull-right" type="submit">Log In</button>
                         </form>
                     </div>
                 </div>

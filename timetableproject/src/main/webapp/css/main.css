@@ -11,3 +11,11 @@
     border-style:solid;
     border-color:lightgray;
 }
+
+.pattern-border
+{
+    border-size:1px;
+    border-style:solid;
+    border-color: #FF6700;
+    border-radius: 40px 0 0 40px;;
+}

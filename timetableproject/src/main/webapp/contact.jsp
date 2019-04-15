@@ -53,7 +53,7 @@
 				<!-- Navigation -->
 				<nav id="nav">
 					<ul class="main-menu nav navbar-nav navbar-right">
-						<li><a href="login.jsp">Login</a></li>
+						<li><a href="/login">Login</a></li>
 						<li><a href="#">About</a></li>
 						<li><a href="contact.jsp">Contact</a></li>
 					</ul>

@@ -212,8 +212,8 @@
         <!-- Navigation -->
         <nav id="nav">
             <ul class="main-menu nav navbar-nav navbar-right">
-                <li><a href="login.jsp">Login</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="/login/">Login</a></li>
+                <li><a href="main.jsp">About</a></li>
                 <li><a href="contact.jsp">Contact</a></li>
             </ul>
         </nav>
@@ -226,6 +226,8 @@
 <!-- Home -->
 <div id="home" class="hero-area">
 
+
+
     <!-- Backgound Image -->
     <div class="bg-image bg-parallax overlay" style="background-image:url(./img/home-background.jpg)"></div>
     <!-- /Backgound Image -->
@@ -237,30 +239,13 @@
                     <h1 class="white-text">Расписание ФПМИ БГУ</h1>
                     <p class="lead white-text">Курсовая работа. Мария Изобова 3 группа</p>
 
-                        <!-- Default dropright button -->
-                        <div class="btn-group dropright">
-                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Dropright
-                            </button>
-                            <div class="dropdown-menu">
-                                <!-- Dropdown menu links -->
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Separated link</a>
-                            </div>
-                        </div>
-                        <%--<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">--%>
-                            <%--<a class="dropdown-item" href="#">Dropdown link</a>--%>
-                            <%--<a class="dropdown-item" href="#">Dropdown link</a>--%>
-                        <%--</div>--%>
-
-                    <%--<a class="main-button icon-button" href="#">Choose semester to start with!</a>--%>
+                    <a class="main-button icon-button" href="main.jsp">Get Started!</a>
                 </div>
             </div>
         </div>
     </div>
+
+
 
 </div>
 <!-- /Home -->

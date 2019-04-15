@@ -18,9 +18,13 @@ else
     serverPath = serverProtocolName + "//" + serverHostName;
 }
 
+function showAdminClass() {
+    $('.admin-class').show();
+}
+
 function serverConnectFunc(serverUrl, jsonData) {
     $.ajax({
-        url: serverUrl + "/",
+        url: "TableRetrieveServlet",
         type: 'POST',
         data: jsonData,
 
@@ -35,12 +39,25 @@ function serverConnectFunc(serverUrl, jsonData) {
                     break;
 
                 case "names":
-                    var keysList = event["list"].replace("[", ""). replace("]", "").split(",");
+                    var keysList = event["list"]["data"];
                     $("#table_names").empty();
 
-                    keysList.forEach(function(item, i, arr) {
-                        $("#table_names").append("<tr><td>" + item + "</td></tr>");
-                    });
+                    for (var i=0; i<keysList.length; i++) {
+                        var items = keysList[i];
+                        var eachrow = "<tr>" +
+                            "<td>" + items["id"] + "</td>" +
+                            "<td>" + items["course"] + "</td>" +
+                            "<td>" + items["group"] + "</td>" +
+                            "<td>" + items["subgroup"] + "</td>" +
+                            "<td>" + items["subject"] + "</td>" +
+                            "<td>" + items["type"] + "</td>" +
+                            "<td>" + items["teacher"] + "</td>" +
+                            "<td>" + items["monday"] + "</td>" +
+                            "<td>" + items["notes"] + "</td>" +
+                            "</tr>";
+                        $('#table_names').append(eachrow);
+
+                    }
 
                     break;
             }
@@ -67,3 +84,16 @@ function addName()
 
     serverConnectFunc(serverPath, JSON.stringify(jsonData));
 }
+
+function updateTable(tableName)
+{
+   // alert("success!!");
+    //alert(serverHostName);
+    //alert(serverProtocolName);
+    var jsonData = new Object();
+    jsonData.command = "0";
+    jsonData.tableName = tableName;
+    serverConnectFunc(serverPath, JSON.stringify(jsonData));
+
+}
+
